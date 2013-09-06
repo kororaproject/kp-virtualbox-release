@@ -1,6 +1,6 @@
 Name:   virtualbox-release
 Version:  1.0
-Release:  1%{?dist}.1
+Release:  2%{?dist}
 Summary:  VirtualBox repository configuration
 
 Group:  System Environment/Base
@@ -36,5 +36,8 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/virtualbox.repo
 
 %changelog
-* Sun May 20 2012 Chris Smart <chris@kororaa.org> - 1.0
+* Sat Sep 7 2013 Chris Smart <csmart@kororaproject.org> - 1.0-2
+- Disable repo by default so that users can just enable the repo to make it work
+
+* Sun May 20 2012 Chris Smart <chris@kororaa.org> - 1.0-1
 - Initial package.
