@@ -1,6 +1,6 @@
 Name:   virtualbox-release
 Version:  1.0
-Release:  1%{?dist}
+Release:  1%{?dist}.1
 Summary:  VirtualBox repository configuration
 
 Group:  System Environment/Base
@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc
 /etc/pki/rpm-gpg/RPM-GPG-KEY-virtualbox
-/etc/yum.repos.d/virtualbox.repo
+%config(noreplace) /etc/yum.repos.d/virtualbox.repo
 
 %changelog
 * Sun May 20 2012 Chris Smart <chris@kororaa.org> - 1.0
